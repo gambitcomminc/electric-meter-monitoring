@@ -74,7 +74,9 @@ For privacy, I blocked out the meter's ID below:
 
 <IMG src=IMG_20200208_165158.jpg width=200>
 
-4. Software
+## 4. Software
+
+## 4.1. Collection
 
 The open-source SDR software tools running on the Raspberry Pi
 
