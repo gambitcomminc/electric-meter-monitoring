@@ -104,7 +104,7 @@ public broker (google "public MQTT broker").
 From there it can now be digested by MQTT subscriber clients to
 display and archive. The JSON telemetry appears such as
 
-> metermon/690xxxxxx {"Type": "Electric", "Unit": "kWh", "Protocol": "SCM+", "ID": "69043319", "Consumption": 24043.43}
+> metermon/690xxxxxx {"Type": "Electric", "Unit": "kWh", "Protocol": "SCM+", "ID": "690xxxxx", "Consumption": 24043.43}
 
 The open-source Home Assistant
 
