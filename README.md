@@ -136,6 +136,9 @@ to collect the telemetry and store it. You could store the telemetry in
 a database, but a flat file suffices. This NODE-RED flow collects JSON
 telemetry from the MQTT topic and stores it in CSV format with a timestamp in a file:
 
+<IMG src=nodered-to-csv.png width=400>
+
+
 ## 4.3. Analysis
 
 The telemetry data is a time series
