@@ -50,6 +50,9 @@ hardware and open-source or low-cost software:
 
 6) MIMIC MQTT Lab ($0.10/hour)
 
+The added benefit is that this setup is extensible to use a miriad of
+applicable software out there.
+
 ## 3. Hardware
 
 Most electric meters in the U.S. broadcast consumption telemetry that
@@ -162,6 +165,23 @@ to be consumed by NODE-RED, or even generate the data files by hand.
 And we did that.  But in the early stages of this project we needed
 to test the NODE-RED telemetry collection, rather than short-circuiting
 parts of the system.
+
+We setup a MQTT lab sensor to publish the telemetry in the same format as
+the real-world sensor to the topic <b>metermon/test</b> the public broker mqtt.eclipse.org,
+then had a NODE-RED flow read that telemetry and process it, as shown here
+
+<IMG src=nodered-mimic.png width=400>
+  
+Since our simulated sensor was publishing at a much higher rate than the real sensor,
+eg. every couple of seconds, rather than a couple of times per hour, we got
+that task done in a fraction of the time.
+
+Then we quickly generated several test data sets to develop and exercise our
+statistical analysis and plotting. We could generate the same data sets with
+scripting and or text editting, but since we already had the lab setup, it was
+just a matter of tweaking a couple of values and MIMIC scripts.
+
+TODO sample plots
 
 ## 5. Next steps
 
