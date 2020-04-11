@@ -138,6 +138,7 @@ telemetry from the MQTT topic and stores it in CSV format with a timestamp in a 
 
 <IMG src=nodered-to-csv.png width=400>
 
+and the flow is in [nodered-to-csv.json](nodered-to-csv.json).
 
 ## 4.3. Analysis
 
