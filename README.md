@@ -36,7 +36,7 @@ widget, or whole house (such as the Sense for $300).
 
 This project implements such a system in under $100 added cost
 (assuming you already have a PC) using off-the-shelf, standards-based
-hardware and open-source or low-cost software:
+hardware and modular, open-source or low-cost software:
 
 1) a Raspberry Pi ($50)
 
@@ -48,7 +48,9 @@ hardware and open-source or low-cost software:
 
 5) Home Assistant
 
-6) MIMIC MQTT Lab ($0.10/hour)
+6) Python-based Pandas, Matplotlib
+
+7) MIMIC MQTT Lab ($0.10/hour)
 
 The added benefit is that this setup is extensible to use a miriad of
 applicable software out there.
@@ -140,15 +142,43 @@ telemetry from the MQTT topic and stores it in CSV format with a timestamp in a 
 
 and the flow is in [nodered-to-csv.json](nodered-to-csv.json).
 
+The resulting .csv contains a time series such as
+
+<pre>
+31948.36,2020-04-11T08:10:25.241Z
+31950.14,2020-04-11T11:18:08.165Z
+31950.54,2020-04-11T12:03:59.784Z
+31951.21,2020-04-11T12:50:35.862Z
+31951.5,2020-04-11T13:43:10.167Z
+31952.48,2020-04-11T15:32:17.249Z
+</pre>
+
+
 ## 4.3. Analysis
 
 The telemetry data is a time series
 
-<A HREF=https://en.wikipedia.org/wiki/Time_series>
 https://en.wikipedia.org/wiki/Time_series
-</A>
 
-of absolute energy consumption values at irregular intervals.
+of absolute energy consumption values at irregular intervals. As such, the
+absolute values are of little value, as shown in this plot using pandas
+
+https://pandas.pydata.org
+
+and Matplotlib
+
+https://matplotlib.org
+
+with this simple code
+
+```python
+
+```
+
+<img src= width=400>
+
+We want to get the first-derivative plot, ie. the rate of consumption during each
+time interval.
 
 ## 4.4. MIMIC MQTT Lab
 
