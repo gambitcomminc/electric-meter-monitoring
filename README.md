@@ -172,13 +172,34 @@ https://matplotlib.org
 with this simple code
 
 ```python
-
+[uwe@localhost python]$ python3
+Python 3.6.8 (default, Nov 21 2019, 19:31:34) 
+[GCC 8.3.1 20190507 (Red Hat 8.3.1-4)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pandas as pd
+>>> import matplotlib.pyplot as plt
+>>> df = pd.read_csv("data.csv")
+>>> df.plot()
+<matplotlib.axes._subplots.AxesSubplot object at 0x7f7430120a90>
+>>> plt.show()
 ```
 
-<img src= width=400>
+<img src=pandas_plot_absolute.png width=400>
 
-We want to get the first-derivative plot, ie. the rate of consumption during each
-time interval.
+We want to get the rate of consumption during each time interval, ie. the first-derivative plot.
+This had to be developed, because time-series with irregular intervals are not common
+
+https://en.wikipedia.org/wiki/Unevenly_spaced_time_series
+
+So we had to develop the first phase analysis to at least plot the hourly rate of consumption.
+This [simple code](pandas_plot_derivative.py) plots 2 different alternatives in separate or
+joint figures. We like the second one better, because it allows us to expand (zoom and pan) 
+both plots simultaneously.
+
+<img src=pandas_plot_derivative.png width=400>
+
+<img src=pandas_plot_derivative2.png width=400>
+
 
 ## 4.4. MIMIC MQTT Lab
 
@@ -196,7 +217,7 @@ to generate different data sets to test the analytics.
 
 Now, you can use any MQTT publisher client to generate the telemetry
 to be consumed by NODE-RED, or even generate the data files by hand.
-And we did that.  But in the early stages of this project we needed
+And we tried that.  But in the early stages of this project we needed
 to test the NODE-RED telemetry collection, rather than short-circuiting
 parts of the system.
 
@@ -210,12 +231,14 @@ Since our simulated sensor was publishing at a much higher rate than the real se
 eg. every couple of seconds, rather than a couple of times per hour, we got
 that task done in a fraction of the time.
 
-Then we quickly generated several test data sets to develop and exercise our
+Then we quickly generated test data sets to develop and exercise our
 statistical analysis and plotting. We could generate the same data sets with
 scripting and or text editting, but since we already had the lab setup, it was
 just a matter of tweaking a couple of values and MIMIC scripts.
 
-TODO sample plots
+<IMG src=pandas_plot_test.png width=400>
+
+
 
 ## 5. Next steps
 
