@@ -3,7 +3,7 @@
 
 by Uwe Zimmermann
 
-Gambit Communications
+[Gambit Communications](https://www.gambitcomm.com)
 
 
 ## 1. Abstract
