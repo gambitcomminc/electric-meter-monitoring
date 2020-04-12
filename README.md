@@ -12,7 +12,7 @@ Smart meter analytics are common on an industrial scale, eg.
 
 https://www.sagewell.com/smart-meter-analytics.html
 
-This DIY project affordably implements collection and simple statistical
+This DIY project affordably implements collection and simple statistical analysis
 for a residential electric meter in your own home or business. Follow-up projects
 can expand on the analytics of the collected data set.
 
