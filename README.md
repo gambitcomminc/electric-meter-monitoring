@@ -200,6 +200,8 @@ both plots simultaneously.
 
 <img src=pandas_plot_derivative2.png width=400>
 
+Those short-term spikes now have to be smoothed out by aggregating into "hour", "day" and "month"
+buckets.
 
 ## 4.4. MIMIC MQTT Lab
 
