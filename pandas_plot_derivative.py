@@ -69,13 +69,34 @@ def plot_alternative2 (df, timestamps):
     # force derivative of first point to 0
     derivative[0] = 0
 
-    ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+    ax2 = ax1.twinx()  # instantiate a second axis that shares the same x-axis
     ax2.plot(timestamps, derivative)
     xfmt = md.DateFormatter('  %m-%d %H:%M:%S')
     days = md.DayLocator()
     ax2.xaxis.set_major_locator(days)
     ax2.xaxis.set_major_formatter(xfmt)
     ax2.set_ylabel('kW')
+
+    # calculate and plot overall hourly rate - the mean
+    # on the same axis as first derivative
+    totalperiod = timestamps[timestamps.size-1]-timestamps[0]
+    totalhours = totalperiod.total_seconds() / 3600
+    totalcons = df.consumption[df.consumption.size-1] - df.consumption[0]
+    meanvalue = totalcons / totalhours
+    meantimes = (timestamps[0], timestamps[timestamps.size-1])
+    timeseries = pd.Series(meantimes)
+    print ("timeseries ", timeseries)
+    meanvals = (meanvalue, meanvalue)
+    valseries = pd.Series(meanvals)
+    print ("valseries ", valseries)
+    ax2.plot(timeseries, valseries, 'r-')
+    annot = 'mean ' + str(meanvalue)
+    print ('annot ', annot)
+    ax2.annotate(annot, xy=(0.5, 0.3),  xycoords='figure fraction',
+            xytext=(0.5, 0.4), textcoords='axes fraction',
+            arrowprops=dict(facecolor='red', shrink=0.05),
+            horizontalalignment='left', verticalalignment='top',
+            )
 
     fig.tight_layout()  # otherwise the right y-label is slightly clipped
 
