@@ -179,6 +179,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> import pandas as pd
 >>> import matplotlib.pyplot as plt
 >>> df = pd.read_csv("data.csv")
+>>> df.index = pd.to_datetime(df.timestamp)
 >>> df.plot()
 <matplotlib.axes._subplots.AxesSubplot object at 0x7f7430120a90>
 >>> plt.show()
