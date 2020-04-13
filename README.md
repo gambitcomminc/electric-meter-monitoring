@@ -259,4 +259,4 @@ just a matter of tweaking a couple of values and MIMIC scripts.
 
 4. Investigate how commercial IoT platforms handle this use case.
 
-                                                              229,0-
+<img src=https://www.gambitcommunications.com/site/images/gambit4.jpg width=100>
