@@ -186,6 +186,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 <img src=pandas_plot_absolute.png width=400>
 
+## 4.3.1. First derivative
+
 We want to get the rate of consumption during each time interval, ie. the first-derivative plot.
 This had to be developed, because time-series with irregular intervals are not common
 
@@ -202,6 +204,11 @@ both plots simultaneously.
 
 Those short-term spikes now have to be smoothed out by aggregating into "hour", "day" and "month"
 buckets.
+
+## 4.3.2. Regular intervals
+
+The next step is to convert the irregular intervals to regular, hourly intervals via linear interpolation.
+
 
 ## 4.4. MIMIC MQTT Lab
 
