@@ -57,10 +57,14 @@ applicable software out there.
 
 ## 3. Hardware
 
-Most electric meters in the U.S. broadcast consumption telemetry that
+Many electric meters in the U.S. broadcast consumption telemetry that
 can be received with low-cost SDR (software defined radio) receivers
 
 https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/
+
+To check whether yours is compatible, google "ERT compatible meter" or look at
+
+https://github.com/bemasher/rtlamr/blob/master/meters.md
 
 The SDR receiver
 
