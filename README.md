@@ -212,7 +212,13 @@ buckets.
 
 ## 4.3.2. Regular intervals
 
-The next step is to convert the irregular intervals to regular, hourly intervals via linear interpolation.
+The next step is to convert the irregular intervals to regular, hourly intervals via linear interpolation
+with this [code](pandas_plot_resampled.py).
+That smoothes out some of those short-term spikes for the hourly graph
+
+<img src="Screenshot from 2020-04-14 14-33-42.png" width=400>
+
+and allows us to do simple resampling for the daily and weekly graphs
 
 
 ## 4.4. MIMIC MQTT Lab
