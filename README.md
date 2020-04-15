@@ -265,6 +265,9 @@ just a matter of tweaking a couple of values and MIMIC scripts.
 
 <IMG src=pandas_plot_test.png width=400>
 
+and we used it for the resampling work in 4.3.2 above
+
+<IMG src="Screenshot from 2020-04-15 09-33-25.png" width=400>
 
 
 ## 5. Next steps
