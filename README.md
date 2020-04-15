@@ -218,7 +218,14 @@ That smoothes out some of those short-term spikes for the hourly graph
 
 <img src="Screenshot from 2020-04-14 14-33-42.png" width=400>
 
-and allows us to do simple resampling for the daily and weekly graphs
+as we can see after we zoom in on a couple of days
+
+<img src="Screenshot from 2020-04-15 09-10-29.png" width=400>
+
+The blue data points are the original samples, and the green is the resampling onto even
+hours. The flat line was an outage in our collection, and effectively got upsampled.
+
+This now allows us to do simple resampling for the daily and weekly graphs
 
 
 ## 4.4. MIMIC MQTT Lab
