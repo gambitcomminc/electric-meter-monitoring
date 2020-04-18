@@ -225,7 +225,10 @@ as we can see after we zoom in on a couple of days
 The blue data points are the original samples, and the green is the resampling onto even
 hours. The flat line was an outage in our collection, and effectively got upsampled.
 
-This now allows us to do simple resampling for the daily and weekly graphs
+This now allows us to do simple resampling for the daily and weekly graphs. A couple of line
+changes in this [code](pandas_plot_days.py) plots the hourly consumption averaged over 24 hours:
+
+<img src="Screenshot from 2020-04-18 11-55-37.png" width=400>
 
 
 ## 4.4. MIMIC MQTT Lab
