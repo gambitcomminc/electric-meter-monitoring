@@ -226,7 +226,8 @@ The blue data points are the original samples, and the green is the resampling o
 hours. The flat line was an outage in our collection, and effectively got upsampled.
 
 This now allows us to do simple resampling for the daily and weekly graphs. A couple of line
-changes in this [code](pandas_plot_days.py) plots the hourly consumption averaged over 24 hours:
+changes in this [code](pandas_plot_days.py) plots the hourly consumption averaged over 24 hours
+(cyan triangles are the daily down-sampling):
 
 <img src="Screenshot from 2020-04-18 11-55-37.png" width=400>
 
