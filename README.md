@@ -207,6 +207,8 @@ both plots simultaneously.
 
 <img src=pandas_plot_derivative2.png width=400>
 
+The <font color=blue>blue</font> circles are the original measurements, the <font color=lightblue>light blue</font>
+line is the first derivative, and the <font color=red>red</font> line is the overall mean average.
 Those short-term spikes now have to be smoothed out by aggregating into "hour", "day" and "month"
 buckets.
 
