@@ -224,8 +224,9 @@ as we can see after we zoom in on a couple of days
 
 <img src="Screenshot from 2020-04-15 09-10-29.png" width=400>
 
-The blue data points are the original samples, and the green is the resampling onto even
-hours. The flat line was an outage in our collection, and effectively got upsampled.
+The blue data points are the original samples, and the green is the resampling onto full
+hours "on the hour" (eg. 1:00 to 2:00, rather than 1:23:45 to 2:23:45).
+The flat light blue line was an outage in our collection, and effectively got upsampled.
 
 This now allows us to do simple resampling for the daily and weekly graphs. A couple of line
 changes in this [code](pandas_plot_days.py) plots the hourly consumption averaged over 24 hours
@@ -233,6 +234,12 @@ changes in this [code](pandas_plot_days.py) plots the hourly consumption average
 
 <img src="Screenshot from 2020-04-18 11-55-37.png" width=400>
 
+Now we can do hourly usage histograms to find the average hourly usage during a typical day
+with this [code](pandas_plot_hourhist.py):
+
+<img src="Screenshot from 2020-04-19 10-19-41.png" width=400>
+
+shows a definite trend in the hourly usage during the day.
 
 ## 4.4. MIMIC MQTT Lab
 
